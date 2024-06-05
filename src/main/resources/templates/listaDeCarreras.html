@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Listado Carreras</title>
+<link rel="stylesheet"
+	data-th-href="@{/webjars/bootstrap/5.3.3/css/bootstrap.min.css}">
+</head>
+<body>
+	<div class="container">
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th scope="col">Codigo</th>
+					<th scope="col">Nombre</th>
+					<th scope="col">Cantidad</th>
+					<th scope="col">Acciones</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr data-th-each="carrera : ${listadoCarreras}">
+					<td data-th-text="${carrera.codigo}"></td>
+					<td data-th-text="${carrera.nombre}"></td>
+					<td data-th-text="${carrera.cantAnios}"></td>
+					<td><a data-th-href="@{'/eliminarCarrera/'+${carrera.codigo}}"
+						class="btn btn-danger">Eliminar</a> <a
+						data-th-href="@{'/modificarCarrera/'+${carrera.codigo}}"
+						class="btn btn-warning">Modificar</a></td>
+
+
+				</tr>
+
+			</tbody>
+		</table>
+
+		<a href="/formularioCarrera"><button type="submit"
+				class="btn btn-primary">Volver al Formulario</button></a>
+	</div>
+	<script
+		data-th-src="@{/webjars/bootstrap/5.3.3/js/bootstrap.bundle.min.js}"></script>
+</body>
+</html>

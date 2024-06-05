@@ -7,17 +7,18 @@
 <body>
 
 	<!-- Image and text -->
-<nav class="navbar navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">
-    <img src="/docs/4.1/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
-    Bootstrap
-  </a>
-</nav>
+	<nav class="navbar navbar-dark bg-dark">
+		<a class="navbar-brand" href="#"> <img
+			src="/docs/4.1/assets/brand/bootstrap-solid.svg" width="30"
+			height="30" class="d-inline-block align-top" alt=""> Bootstrap
+		</a>
+	</nav>
 
-	<nav class="navbar navbar-expand-lg bg-body-tertiary" data-th-fragment="navbar">
-	<a href="/principal/home">
-	<img src="/image/fiunju.png" width="285" height="159" class="d-inline-block align-top" alt="Pagina Principal">
-	</a>
+	<nav class="navbar navbar-expand-lg bg-body-tertiary"
+		data-th-fragment="navbar">
+		<a href="/home"> <img src="/image/fiunju.png" width="285"
+			height="159" class="d-inline-block align-top" alt="Pagina Principal">
+		</a> Facultad de Ingenieria de Jujuy
 		<div class="container-fluid">
 			<button class="navbar-toggler" type="button"
 				data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -28,21 +29,42 @@
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 					<li class="nav-item"><a class="nav-link active"
-						aria-current="page" href="/principal/home">Inicio</a></li>
-					<li class="nav-item"><a class="nav-link" href="/principal/info">Acerca de</a></li>
+						aria-current="page" href="/home">Inicio</a></li>						
 					<li class="nav-item dropdown"><a
 						class="nav-link dropdown-toggle" href="#" role="button"
-						data-bs-toggle="dropdown" aria-expanded="false"> Carreras </a>
+						data-bs-toggle="dropdown" aria-expanded="false"> Carrera</a>
 						<ul class="dropdown-menu">
-							<li><a class="dropdown-item" href="#">carrera1</a></li>
-							<li><a class="dropdown-item" href="#">carrera2</a></li>
-							<li><a class="dropdown-item" href="#">carrera3</a></li>
-							<li><a class="dropdown-item" href="#">carrera4</a></li>
+							<li><a class="dropdown-item" href="/formularioCarrera">Formulario Carrera</a></li>
+							<li><a class="dropdown-item" href="/guardarCarrera">Ver Carreras</a></li>
 						</ul></li>
-						<li class="nav-item"><a class="nav-link active"
-							aria-current="page" href="/principal/noticias">Noticias</a></li>
-						<li class="nav-item"><a class="nav-link active"
-						aria-current="page" href="/principal/home#contacto">Contacto</a></li>
+						
+					<li class="nav-item dropdown"><a
+						class="nav-link dropdown-toggle" href="#" role="button"
+						data-bs-toggle="dropdown" aria-expanded="false"> Alumno </a>
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="#">Formulario Alumno</a></li>
+							<li><a class="dropdown-item" href="#">Ver Alumnos</a></li>
+						</ul></li>
+						
+					<li class="nav-item dropdown"><a
+						class="nav-link dropdown-toggle" href="#" role="button"
+						data-bs-toggle="dropdown" aria-expanded="false"> Docente </a>
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="#">Formulario Docente</a></li>
+							<li><a class="dropdown-item" href="#">Ver Docentes</a></li>
+						</ul></li>
+						
+					<li class="nav-item dropdown"><a
+						class="nav-link dropdown-toggle" href="#" role="button"
+						data-bs-toggle="dropdown" aria-expanded="false"> Materia </a>
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="#">Formulario Materia</a></li>
+							<li><a class="dropdown-item" href="#">Ver Materias</a></li>
+						</ul></li>
+					<li class="nav-item"><a class="nav-link active"
+						aria-current="page" href="/principal/noticias">Noticias</a></li>
+					<li class="nav-item"><a class="nav-link active"
+						aria-current="page" href="/home#contacto">Contacto</a></li>
 
 				</ul>
 			</div>
@@ -50,30 +72,35 @@
 	</nav>
 
 
-		<div class="container" data-th-fragment="pie">
-			<div class="row">
-				<div class="col l6 s12">
-					<h5 class="white-text">Footer Content</h5>
-					<p class="grey-text text-lighten-4">You can use rows and
-						columns here to organize your footer content.</p>
-				</div>
-				<div class="col l4 offset-l2 s12">
-					<h5 class="white-text">Links</h5>
-					<ul>
-						<li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-						<li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-						<li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-						<li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
-					</ul>
-				</div>
+	<div class="container" data-th-fragment="pie">
+		<div class="row">
+			<div class="col l6 s12">
+				<h1>Contacto</h1>
+				<ul>
+					<li>TELÉFONO: 0388-422-1576</li>
+					<li>MAIL: info@fi.unju.edu.ar</li>
+				</ul>
+			</div>
+			<div class="col l4 offset-l2 s12">
+				<h1>Redes Sociales</h1>
+				<h5 class="white-text">Links</h5>
+				<ul>
+					<li><a class="grey-text text-lighten-3"
+						href="https://www.facebook.com/fiunju/">Facebook</a></li>
+					<li><a class="grey-text text-lighten-3"
+						href="https://www.instagram.com/fiunju/">YouTube</a></li>
+					<li><a class="grey-text text-lighten-3"
+						href="#https://www.instagram.com/fiunju/">Instagram</a></li>
+				</ul>
 			</div>
 		</div>
-		<div class="footer-copyright">
-			<div class="container">
-				© 2014 Copyright Text <a class="grey-text text-lighten-4 right"
-					href="#!">More Links</a>
-			</div>
+	</div>
+	<div class="footer-copyright">
+		<div class="container">
+			© 2014 Copyright Text <a class="grey-text text-lighten-4 right"
+				href="#!">More Links</a>
 		</div>
+	</div>
 
 
 </body>
