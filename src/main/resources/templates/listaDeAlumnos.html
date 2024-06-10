@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	data-th-href="@{/webjars/bootstrap/5.3.3/css/bootstrap.min.css}">
+<title>Lista de Alumnos</title>
+</head>
+<body>
+
+	<div class="container">
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th scope="col">DNI</th>
+					<th scope="col">Nombre</th>
+					<th scope="col">Apellido</th>
+					<th scope="col">Email</th>
+					<th scope="col">Telefono</th>
+					<th scope="col">Fecha de Nacimiento</th>
+					<th scope="col">Domicilio</th>
+					<th scope="col">Libreta Universitaria</th>
+					<th scope="col">Acciones</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr data-th-each="alumno : ${listadoAlumnos}">
+					<td data-th-text="${alumno.dni}"></td>
+					<td data-th-text="${alumno.nombre}"></td>
+					<td data-th-text="${alumno.apellido}"></td>
+					<td data-th-text="${alumno.email}"></td>
+					<td data-th-text="${alumno.telefono}"></td>
+					<td data-th-text="${alumno.fechaNacimiento}"></td>
+					<td data-th-text="${alumno.domicilio}"></td>
+					<td data-th-text="${alumno.libretaUni}"></td>
+										
+					
+					<td><a data-th-href="@{'/eliminarAlumno/'+${alumno.libretaUni}}"
+						class="btn btn-danger">Eliminar</a> <a
+						data-th-href="@{'/modificarAlumno/'+${alumno.libretaUni}}"
+						class="btn btn-warning">Modificar</a></td>
+
+
+				</tr>
+
+			</tbody>
+		</table>
+
+		<a href="/formularioAlumno"><button type="submit"
+				class="btn btn-primary">Volver al Formulario</button></a>
+	</div>
+	<script
+		data-th-src="@{/webjars/bootstrap/5.3.3/js/bootstrap.bundle.min.js}"></script>
+</body>
+</html>

@@ -14,11 +14,11 @@
 	<div class="container">
 		<h1>Formulario Carrera</h1>
 		<form data-th-object="${nuevaCarrera}"
-			data-th-action="@{/guardarCarrera}" method="post">
+			data-th-action="${bandera}?@{/modificarCarrera}:@{/guardarCarrera}" method="post">
 			<div class="col-sm-6">
 				<label for="codigo" class="form-label">Codigo</label> <input
 					type="text" class="form-control" id="codigo"
-					data-th-field="*{codigo}" required>
+					data-th-field="*{codigo}"  data-th-readonly="${bandera}">
 			</div>
 
 			<div class="col-sm-6">
@@ -36,8 +36,7 @@
 				Carrera</button>
 
 		</form>
-		<br>
-		<a href="/guardarCarrera"><button type="submit"
+		<br> <a href="/guardarCarrera"><button type="submit"
 				class="btn btn-primary">Ver Carreras</button></a>
 	</div>
 
