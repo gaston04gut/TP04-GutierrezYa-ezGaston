@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	data-th-href="@{/webjars/bootstrap/5.3.3/css/bootstrap.min.css}">
+<title>Formulario Alumno</title>
+</head>
+<body>
+
+	<header>
+		<div data-th-replace="~{fragments/header::navbar}"></div>
+	</header>
+
+	<div class="container">
+		<h1>Formulario Alumno</h1>
+		<form data-th-object="${nuevoAlumno}"
+			data-th-action="${bandera}?@{/modificarAlumno}:@{/guardarAlumno}"
+			method="post">
+			<div class="col-sm-6">
+				<label for="dni" class="form-label">DNI</label> <input type="text"
+					class="form-control" id="dni" data-th-field="*{dni}" >
+			</div>
+
+			<div class="col-sm-6">
+				<label for="nombre" class="form-label">Nombre Alumno</label> <input
+					type="text" class="form-control" id="nombre"
+					data-th-field="*{nombre}" required>
+			</div>
+
+			<div class="col-sm-6">
+				<label for="apellido" class="form-label">Apellido Alumno</label> <input
+					type="text" class="form-control" id="apellido"
+					data-th-field="*{apellido}" required>
+			</div>
+
+			<div class="col-sm-6">
+				<label for="email" class="form-label">Email Alumno</label> <input
+					type="email" class="form-control" id="email"
+					data-th-field="*{email}" required>
+			</div>
+
+			<div class="col-sm-6">
+				<label for="telefono" class="form-label"></label>Telefono Alumno<input
+					type="number" class="form-control" id="telefono"
+					data-th-field="*{telefono}" required>
+			</div>
+
+			<div class="col-sm-6">
+				<label for="fechaN" class="form-label"></label>Fecha de Nacimiento
+				Alumno<input type="date" class="form-control" id="fechaN"
+					data-th-field="*{fechaNacimiento}" required>
+			</div>
+			<div class="col-sm-6">
+				<label for="domicilio" class="form-label"></label>Domicilio Alumno<input
+					type="text" class="form-control" id="domicilio"
+					data-th-field="*{domicilio}" required>
+			</div>
+			<div class="col-sm-6">
+				<label for="libretaU" class="form-label"></label>Libreta
+				Universitaria Alumno<input type="text" class="form-control"
+					id="libretaU" data-th-field="*{libretaUni}" required data-th-readonly="${bandera}">
+			</div>
+
+
+			<br>
+			<button type="submit" class="btn btn-primary">Guardar Alumno</button>
+
+		</form>
+		<br> <a href="/guardarAlumno"><button type="submit"
+				class="btn btn-primary">Ver Alumnos</button></a>
+	</div>
+
+	<script
+		data-th-src="@{/webjars/bootstrap/5.3.3/js/bootstrap.bundle.min.js}"></script>
+</body>
+</html>

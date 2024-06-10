@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Listado Carreras</title>
+<link rel="stylesheet"
+	data-th-href="@{/webjars/bootstrap/5.3.3/css/bootstrap.min.css}">
+</head>
+<body>
+
+	<div class="container">
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th scope="col">Codigo</th>
+					<th scope="col">Nombre</th>
+					<th scope="col">Curso</th>
+					<th scope="col">Cantidad de Horas</th>
+					<th scope="col">Carrera</th>
+					<th scope="col">Acciones</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr data-th-each="materia : ${listadoMaterias}">
+					<td data-th-text="${materia.codigo}"></td>
+					<td data-th-text="${materia.nombre}"></td>
+					<td data-th-text="${materia.cantidadHoras}"></td>
+					<td data-th-text="${materia.modalidad}"></td>
+					<td data-th-text="${materia.carrera}"></td>
+					<td><a data-th-href="@{'/eliminarMateria/'+${materia.codigo}}"
+						class="btn btn-danger">Eliminar</a> <a
+						data-th-href="@{'/modificarMateria/'+${materia.codigo}}"
+						class="btn btn-warning">Modificar</a></td>
+
+
+				</tr>
+
+			</tbody>
+		</table>
+
+		<a href="/formularioMateria"><button type="submit"
+				class="btn btn-primary">Volver al Formulario</button></a>
+	</div>
+
+
+<script
+		data-th-src="@{/webjars/bootstrap/5.3.3/js/bootstrap.bundle.min.js}"></script>
+</body>
+</html>

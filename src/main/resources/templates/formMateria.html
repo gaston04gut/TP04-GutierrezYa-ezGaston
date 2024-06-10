@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	data-th-href="@{/webjars/bootstrap/5.3.3/css/bootstrap.min.css}">
+<title>Formulario Materia</title>
+</head>
+<body>
+	<header>
+		<div data-th-replace="~{fragments/header::navbar}"></div>
+	</header>
+	<div class="container">
+		<h1>Formulario Materia</h1>
+		<form data-th-object="${nuevaMateria}"
+			data-th-action="${bandera}?@{/modificarMateria}:@{/guardarMateria}"
+			method="post">
+
+
+
+
+			<div class="col-sm-6">
+				<label for="codigo" class="form-label">Codigo Materia</label> <input
+					type="text" class="form-control" id="codigo"
+					data-th-field="*{codigo}" required data-th-readonly="${bandera}">
+			</div>
+
+
+
+
+
+
+
+			<div class="col-sm-6">
+				<label for="nombre" class="form-label">Nombre Materia</label> <input
+					type="text" class="form-control" id="nombre"
+					data-th-field="*{nombre}" required>
+			</div>
+
+			<div class="col-sm-6">
+				<label for="curso" class="form-label">Curso</label> <input
+					type="text" class="form-control" id="curso"
+					data-th-field="*{curso}" required>
+			</div>
+			<div class="col-sm-6">
+				<label for="horas" class="form-label">Cantidad de Horas</label> <input
+					type="number" class="form-control" id="horas"
+					data-th-field="*{cantidadHoras}" required>
+			</div>
+
+			<div class="col-sm-6">
+				<label for="modalidad" class="form.label">Modalidad:</label> <select
+					id="modalidad" name="modalidad" required
+					data-th-field="*{modalidad}">
+					<option value="PRESENCIAL">Presencial</option>
+					<option value="VIRTUAL">Virtual</option>
+				</select><br>
+			</div>
+
+
+
+<!-- 			Falta Docente -->
+
+
+
+
+
+
+			<div class="col-sm-6">
+				<label for="carrera" class="form-label">Carrera</label> <input
+					type="text" class="form-control" id="carrera"
+					data-th-field="*{carrera}" required>
+			</div>
+
+
+			<br>
+			<button type="submit" class="btn btn-primary">Guardar
+				Materia</button>
+
+		</form>
+		<br> <a href="/guardarMateria"><button type="submit"
+				class="btn btn-primary">Ver Materias</button></a>
+	</div>
+
+
+
+	<script
+		data-th-src="@{/webjars/bootstrap/5.3.3/js/bootstrap.bundle.min.js}"></script>
+</body>
+</html>
