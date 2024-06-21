@@ -16,7 +16,10 @@
 					<th scope="col">Nombre</th>
 					<th scope="col">Curso</th>
 					<th scope="col">Cantidad de Horas</th>
-					<th scope="col">Carrera</th>
+					<th scope="col">Modalidad</th>
+					
+					<th scope="col">Docente</th>
+				     <th scope="col">Carrera</th>
 					<th scope="col">Acciones</th>
 				</tr>
 			</thead>
@@ -24,9 +27,14 @@
 				<tr data-th-each="materia : ${listadoMaterias}">
 					<td data-th-text="${materia.codigo}"></td>
 					<td data-th-text="${materia.nombre}"></td>
+					<td data-th-text="${materia.curso}"></td>
 					<td data-th-text="${materia.cantidadHoras}"></td>
 					<td data-th-text="${materia.modalidad}"></td>
-					<td data-th-text="${materia.carrera}"></td>
+
+					
+					<td data-th-text="${materia.docente.apellido}"></td>
+		      		  <td data-th-text="${materia.carrera.nombre}"></td>
+					
 					<td><a data-th-href="@{'/eliminarMateria/'+${materia.codigo}}"
 						class="btn btn-danger">Eliminar</a> <a
 						data-th-href="@{'/modificarMateria/'+${materia.codigo}}"
