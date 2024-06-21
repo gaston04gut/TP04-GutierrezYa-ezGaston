@@ -60,18 +60,38 @@
 
 
 
-<!-- 			Falta Docente -->
-
-
-
-
-
+			<!-- 			Falta Docente -->
 
 			<div class="col-sm-6">
+				<label for="docente" class="form-label">Docente</label> <select
+					id="docente" data-th-field="*{docente.legajo}" class="form-control"
+					required>
+					<option value="">Seleccionar Docente</option>
+					<option data-th-value="${d.legajo}"
+						data-th-each="d:${listadoDocentes}" data-th-text="${d.apellido}"></option>
+				</select>
+
+			</div>
+
+			<div class="col-sd-6">
+				<label for="carrera" class="form-label">Carrera</label> <select
+					id="carrera" data-th-field="*{carrera.codigo}" class="form-control"
+					required>
+					<option value="">Seleccionar Carrera</option>
+					<option data-th-value="${c.codigo}"
+						data-th-each="c:${listadoCarreras}" data-th-text="${c.nombre}"></option>
+				</select>
+
+			</div>
+
+
+
+
+			<!-- 			<div class="col-sm-6">
 				<label for="carrera" class="form-label">Carrera</label> <input
 					type="text" class="form-control" id="carrera"
 					data-th-field="*{carrera}" required>
-			</div>
+			</div> -->
 
 
 			<br>

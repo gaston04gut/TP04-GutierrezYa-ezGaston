@@ -10,7 +10,7 @@ public class Materia {
 	private int cantidadHoras;
 	private modalidad modalidad;
 	private Docente docente;
-	private String carrera;
+	private Carrera carrera;
 	private Boolean estado;
 
 	public Materia() {
@@ -18,7 +18,7 @@ public class Materia {
 	}
 
 	public Materia(String codigo, String nombre, String curso, int cantidadHoras,
-			ar.edu.unju.fi.model.Materia.modalidad modalidad, Docente docente, String carrera, Boolean estado) {
+			ar.edu.unju.fi.model.Materia.modalidad modalidad, Docente docente, Carrera carrera, Boolean estado) {
 		this.codigo = codigo;
 		this.nombre = nombre;
 		this.curso = curso;
@@ -77,11 +77,11 @@ public class Materia {
 		this.docente = docente;
 	}
 
-	public String getCarrera() {
+	public Carrera getCarrera() {
 		return carrera;
 	}
 
-	public void setCarrera(String carrera) {
+	public void setCarrera(Carrera carrera) {
 		this.carrera = carrera;
 	}
 
